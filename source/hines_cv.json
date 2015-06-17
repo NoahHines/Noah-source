@@ -1,0 +1,204 @@
+{
+    "settings": {
+        "icons": true
+    },
+    "firstname": "Noah",
+    "familyname": "Hines",
+    "linkedin_id": "noah-hines",
+    "github_id": "NoahHines",
+    "bio_data": {
+        "email": "hinesnoa @ msu.edu",
+        "phone": "+1 (616) 916-8722",
+        "website": "http://NoahHines.com",
+        "stars": [
+            "Full Stack",
+            "Web",
+            "Mobile"
+        ],
+        "summary": {
+            "points": [
+                "Passion for web and mobile development.",
+                "Active member of the Lansing entrepreneurship community."
+            ]
+        },
+        "github_projects": {
+            "details": [
+                            {
+                    "project_name": "noahhines/Chartholdr",
+                    "tagline": "An image placeholder for charts and graphs.",
+                    "description": [
+                        "[Chartholdr.io](http://Chartholdr.io) is a dynamic image placeholder service that generates lorem ipsum pie, line, and bar graphs for use in web design. This project was written in Ruby and powered by Rails with PhantomJS as the headless browser backend."
+                    ]
+                },
+                {
+                    "project_name": "prat0318/json_resume",
+                    "tagline": "Generates pretty HTML, LaTeX, markdown, with biodata feeded as input in JSON",
+                    "description": [
+                        "As a main contributor, I optimized use of web fonts and made the html rendering mobile-first and responsive."
+                    ]
+                }
+            ]
+        },
+        "skills": {
+            "details": [
+                {
+                    "type": "Languages",
+                    "items": [
+                        "Ruby",
+                        "Javascript",
+                        "HTML5",
+                        "CSS3",
+                        "LESS + Sass",
+                        "C++",
+                        "C#",
+                        "C"
+                    ]
+                },
+                {
+                    "type": "Web Frameworks",
+                    "items": [
+                        "Angular JS",
+                        "Gulp / Bower / Grunt",
+                        "Node",
+                        "Foundation",
+                        "Jade"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "show_gpa": false,
+            "schools": [
+                {
+                    "degree": "Bachelor of Science",
+                    "major": "Computer Science Engineering and Design",
+                    "institution": "Michigan State University",
+                    "graduation_year": 2016,
+                    "gpa": "3.37/4"
+                }
+            ]
+        },
+        "acad_achievements": {
+            "items": [
+                "Admitted into College of Engineering",
+                "Resident Asisstant at Michigan State University"
+            ]
+        },
+        "experience": {
+            "items": [
+            {
+                    "title": "App Dev Intern",
+                    "organisation": "General Mills Inc.",
+                    "location": "Minneapolis, Minnesota",
+                    "from": "May. 2015",
+                    "to": "August. 2015",
+                    "details": [
+                        ".NET developer writing a web app for internal conferences.",
+                        "Used AngularJS as the front end to create a single page application."
+                    ],
+                    "technology_used": {
+                        "tools": [
+                            "Visual Studio 2013, C#",
+                            "AngularJS",
+                            "Debugging with Batarang"
+                        ]
+                    }
+                },
+                {
+                    "title": "IT Intern",
+                    "organisation": "Union Pacific Railroads",
+                    "location": "Omaha, Nebraska",
+                    "from": "May. 2014",
+                    "to": "August. 2014",
+                    "details": [
+                        "Developed Phonegap plugin for Android & iOS to ping iBeacons.",
+                        "Wrote an environment doctor script to help solve front-end dev problems."
+                    ],
+                    "technology_used": {
+                        "tools": [
+                            "PhoneGap",
+                            "AngularJS",
+                            "Java",
+                            "Bash",
+                            "Batch",
+                            "Objective-C"
+                        ]
+                    }
+                },
+                {
+                    "title": "Resident Assistant",
+                    "organisation": "Michigan State University Resident Life",
+                    "location": "East Lansing, Michigan",
+                    "from": "August. 2014",
+                    "to": "Current",
+                    "details": [
+                        "RA for 41 students in North Case Hall."
+                    ]
+                },
+                {
+                    "title": "Temp Lab Technician",
+                    "organisation": "Amway",
+                    "location": "Ada, MI",
+                    "from": "May. 2012",
+                    "to": "August. 2013",
+                    "details": [
+                        "Implemented instrument interfacing in the LIMS QA environment.",
+                        "Logged standard inventory into LIMS production environment."
+
+                    ]
+                }
+            ]
+        },
+        "undergrad_courses": [
+            {
+                "name": "CSE 231: Introduction to Programming I",
+                "url": "http://www.cse.msu.edu/~cse231/"
+            },
+            {
+                "name": "CSE 232: Introduction to Programming II",
+                "url": "http://www.cse.msu.edu/~cse232/"
+            },
+            {
+                "name": "CSE 260: Discrete Structures in Computer Science",
+                "url": "http://www.cse.msu.edu/~cse260/"
+            },
+            {
+                "name": "CSE 320: Computer Organization and Architecture",
+                "url": "http://www.cse.msu.edu/~cse320/"
+            },
+            {
+                "name": "CSE 335: Object-Oriented Software Development",
+                "url": "https://www.cse.msu.edu/~cse335/"
+            },
+            {
+                "name": "CSE 331: Algorithms and Data Structures",
+                "url": "http://www.cse.msu.edu/Students/Future_Undergrad/CSE_Prereq/Syllabi/CSE_331.html"
+            },
+            {
+                "name": "CSE 410: Operating Systems",
+                "url": "http://www.cse.msu.edu/Students/Future_Undergrad/CSE_Prereq/Syllabi/CSE_410.html"
+            },
+            {
+                "name": "CSE 477: Web Architechure",
+                "url": "https://www.cse.msu.edu/~cse477"
+            }
+        ],
+        "extra_curricular": {
+            "items": [
+                "Co-founder of freelance web startup [BrainStorm Trust](http://brainstormtrust.com)",
+                "Eagle Scout from Troop 334 Cascade, MI.",
+                "2nd place in Union Pacific Intern Hackathon 2014",
+                "Odyssey of the Mind Judge 2012-2015",
+                "Odyssey of the Mind Asst. Coach 2009-2011"
+            ]
+        },
+        "memberships": {
+            "committees": [
+                "MSU Entrepreneurship Association",
+                "MSU Residence Education and Housing Services",
+                "MSU Outdoors Club",
+                "Boy Scout Troop 334"
+            ]
+        }
+    }
+}

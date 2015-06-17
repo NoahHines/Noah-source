@@ -1,0 +1,281 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+@import "palette.scss";
+
+// Headers
+h1, h2 {
+  a {
+    color: $frat-red;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+h3, h4 {
+  a {
+    color: $jeans;
+    &:hover {
+      color: $terminal;
+      text-decoration: underline;
+    }
+  }
+}
+
+p a {
+  color: $frat-red;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//Blog banner
+.blog-banner {
+  display: none;
+}
+.blog-banner div h3 {
+    overflow: overlay;
+}
+.blog-arrow {
+  float: right;
+  padding: 0 0.4em;
+}
+
+// Sections
+#terminal {
+  height: auto;
+  padding: 1em 0;
+  background-color: $faded-jeans;
+}
+#portfolio, #contact {
+  padding-top: 4em;
+}
+#contact {
+  padding-bottom: 8em;
+}
+
+// Portfolio
+.card {
+  border: 1px solid #ededed;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.card .card-title {
+  padding: 1rem;
+}
+.card .card-section {
+  padding: 0 1rem;
+}
+.project-thumbnail-img {
+  padding: 1rem 0;
+  height: 200px;
+  width: auto;
+}
+
+// CODE
+code {
+  line-height: initial;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 2px 4px;
+  font-size: 85%;
+  color: #4D8CF4;
+  background-color: whitesmoke;
+  // white-space: nowrap;
+  border-radius: 2px;
+}
+code, pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+/// form
+// remove bottom margin on form SEND button
+form .row div .large {
+    margin-bottom: 0;
+}
+
+
+// blog image floating
+// p img {
+//   float: right;
+//   margin: 5px;
+// }
+.text-center img {
+  float: none;
+  margin: 0;
+}
+
+.profile-pic {
+    border-radius: 35px;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+}
+// footer CSS
+.footer {
+  background-color: $frat-red;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: $randy-newman;
+  i {
+    font-size: 1.6em;
+  }
+}
+
+.footer {
+  h4 {
+    color: $randy-newman;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: 500; 
+    font-size: .8rem;
+  }
+  a {
+    font-weight: 400;
+    color: $sour-yellow;
+    &:hover {
+      color: $sour-yellow;
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-links {
+  list-style-type: none;
+  a {
+    color: $randy-newman;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  li {
+    margin-top: .6rem;
+  }
+}
+
+
+// Terminal Animation
+.terminal-window {
+  text-align: left;
+  max-width: 640px;
+  height: 360px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+}
+
+.terminal-window header {
+  background: #E0E8F0;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+}
+
+.terminal-window header .terminal-button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.terminal-window header .terminal-button.green {
+  background: #3BB662;
+}
+
+.terminal-window header .terminal-button.yellow {
+  background: #E5C30F;
+}
+
+.terminal-window header .terminal-button.red {
+  background: #E75448;
+}
+
+.terminal-window section.terminal {
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+
+  color: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #30353A;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.terminal-window section.terminal .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray { color: gray; }
+.terminal-window .green { color: green;}
+//////// Terminal Animation
+
+
+// Desktop styles
+@media only screen and (min-width: 40.063em) {
+  //Blog banner
+  .blog-banner {
+    display: inline;
+    position: absolute;
+    /* float: right; */
+    right: 0;
+    width: 340px;
+    padding: 0.4rem;
+  }
+  #terminal {
+    padding-top: 2.5em;
+    height: 700px;
+  }
+  .footer {
+    .columns:nth-child(n+2) {
+     border-left: 1px solid scale-color(#fff, $lightness: -30%);
+     min-height: 280px;
+   }
+ }
+
+ // Blog
+ .button-icons {
+  padding: 1em 0;
+ }
+ .button-icons i {
+  font-size: 2.5em;
+  margin: 0 0.2em;
+  color: $terminal;
+  &:hover {
+    color: $weak-gray;
+  }
+}
+
+}
+

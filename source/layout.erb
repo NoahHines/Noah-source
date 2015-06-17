@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <title>Noah's Blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
+  <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/foundation.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+  <link rel="stylesheet" href="/icons/foundation-icons.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">Noah Hines</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a href="/#portfolio">Portfolio</a></li>
+        <li class="active"><a href="/resume">Resume</a></li>
+        <li class="active"><a href="/#contact">Contact</a></li>
+        <li class="active big-link"><a href="/blog.html">Blog</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <% if current_page.data.isHomePage %>
+    <%= yield %>
+  <% end %>
+
+  <!-- Blog view -->
+  <% if !current_page.data.isHomePage %>
+  <br>
+  <div class="row">
+    <div class="large-9 columns" role="content">
+      <%= yield %>
+    </div>
+    <div class="large-3 columns hide-for-small">
+      <aside>
+        <div class="row">
+          <div class="small-12 columns">
+            <img class="profile-pic" src="/images/noah.jpg">
+            <div class="button-icons text-center">
+              <a href="http://github.com/NoahHines"><i class="fi-social-github"></i></a>
+              <a href="http://twitter.com/NoahTrust"><i class="fi-social-twitter"></i></a>
+              <a href="https://www.linkedin.com/pub/noah-hines/54/934/725"><i class="fi-social-linkedin"></i></a>
+            </div>
+            <p class="text-center">My name is Noah Hines and I love problem solving. I work with a team of developers called BrainStorm Trust building responsive web apps. I also enjoy playing guitar and exercising.</p>
+          </div>
+        </div>
+
+      </aside>
+      <aside>
+        <h3>Blog Posts</h3>
+        <ol>
+          <% blog.articles[0...10].each do |article| %>
+          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+          <% end %>
+        </ol>
+
+        <h3>Tags</h3>
+        <ol>
+          <% blog.tags.each do |tag, articles| %>
+          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+          <% end %>
+        </ol>
+
+        <h3>By Year</h3>
+        <ol>
+          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+          <% end %>
+        </ol>
+      </aside>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="footer">
+    <div class="row full-width">
+      <div class="small-12 medium-3 large-4 columns">
+        <img src="http://chartholdr.io/pie/95">
+        <br><br>
+        <p>I am the creator of <a href="http://Chartholdr.io">Chartholdr.io</a>, a fast and simple image placeholder for charts and graphs. The project is open source and continually supported by me and my friends.</p>
+      </div>
+      <div class="small-12 medium-3 large-4 columns">
+        <img src="/images/BST_logo.svg" height=95 width=107>
+        <br><br>
+        <p>BrainStorm Trust is a web development company based in Lansing where I work as a full stack developer. Read more at our site <a href="http://brainstormtrust.com">BrainStormTrust.com</a>.</p>
+      </div>
+      <div class="small-6 medium-3 large-2 columns">
+        <h4>Site Map</h4>
+        <ul class="footer-links">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="small-6 medium-3 large-2 columns">
+        <h4>Follow Me</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NoahHines">GitHub</a></li>
+          <li><a href="https://twitter.com/NoahTrust">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/pub/noah-hines/54/934/725">Linked In</a></li>
+          <li><a href="http://brainstormtrust.com">BST Web</a></li>
+        </ul>
+      </div>
+    </div>
+    <small>&copy;<script>document.write(new Date().getFullYear())</script> NoahHines.com</small>
+  </footer>
+  <script src="/javascripts/vendor/jquery.js"></script>
+  <script src="/javascripts/foundation/foundation.js"></script>
+  <script src="/javascripts/foundation/foundation.topbar.js"></script>
+  <script src="/javascripts/foundation/foundation.dropdown.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/vendor/typed.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

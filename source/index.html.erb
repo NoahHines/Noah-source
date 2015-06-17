@@ -1,0 +1,181 @@
+---
+pageable: true
+per_page: 10
+isHomePage: true
+title: INDEX
+---
+
+<!-- Blog banner -->
+<div class="blog-banner show-for-large-up">
+	<span class="blog-arrow"><img src="/images/arrow.svg" height=40 width=70></span>
+	<div class="text-right">
+		<h5>Check out my latest blog post!</h5>
+		<h3><%= link_to page_articles[0].title, page_articles[0] %></h3>
+	</div>
+</div>
+
+<section id="terminal">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="terminal-window">
+				<header>
+					<div class="terminal-button green"></div>
+					<div class="terminal-button yellow"></div>
+					<div class="terminal-button red"></div>
+				</header>
+				<section class="terminal"`>
+					<div class="history"></div>
+					$&nbsp;<span class="prompt"></span>
+					<span class="typed-cursor"></span>
+
+				</section>
+			</div>
+			<!-- data -->
+			<div class="terminal-data noah-run-output">                            
+				-------------------<br>
+				Noah Hines v0.21.0: 
+				<p>
+					Age: 21<br>
+					Major: Computer Science<br>
+					Skills: Full Stack Development<br>
+					Languages: Javascript, Ruby, C++, C#, Python<br>
+					Frameworks: AngularJS, Node, Foundation, Sass
+				</p>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<h3>Hello! My name is Noah and I love solving problems.</h3>
+			<br>
+			<h4>I work with a team of developers called <a href="http://brainstormtrust.com">BrainStorm Trust</a> building responsive web apps.</h4>
+			<br>
+			<a href="#portfolio" class="button large">View Portfolio</a>
+		</div>
+	</div>
+</section>
+
+<section id="portfolio">
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<h2>Portfolio</h2>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+			<div class="card">
+				<div class="project-thumbnail-img text-center">
+					<img src="http://chartholdr.io/pie/200">
+				</div>
+				<div class="card-title text-center">
+					<h3>Chartholdr.io</h3>
+				</div>
+				<div class="card-section">
+					<p>Chartholdr is a quick and easy placeholder image service that delivers lorem ipsum charts and graphs. Similar to placehold.it, Chartholdr allows you to use short URLs to input chart PNGs into your website.</p>
+					<code>&lt;img style="float:right;" src="http://chartholdr.io/pie/200"&gt;</code>
+					<br><br>
+					<p>I first had the idea for Chartholdr when presenting an early web design to a client. The days leading up to the presentation were spent building the layout, which consisted of blank placehold.it images as well as adorable placekitten images. I stared at the site so long that I forgot there were cats and never considered it could give the client the wrong image of his future site. The meeting was pretty awkward and I desperately wished there was an image placeholder solution that could deliver professional content that still looked nice.</p>
+					<p>So, I created Chartholdr.</p>
+					<div class="text-center">
+						<img src="http://chartholdr.io/pie/40/c=d50000"><img src="http://chartholdr.io/pie/50/c=ff6d00"><img src="http://chartholdr.io/pie/60/c=ffd600"><img src="http://chartholdr.io/pie/70/c=00c853"><img src="http://chartholdr.io/pie/80/c=0091ea"><img src="http://chartholdr.io/pie/90/c=304ffe">
+						<img src="http://chartholdr.io/pie/100/c=aa00ff">
+					</div>
+					<p>Chartholdr is built with Ruby on Rails and is hosted on Elastic Beanstalk. The project is open source and is continually supported by me and the rest of the BrainStorm Trust. If you're curious about the nitty gritty details, check out my technical blog post about Chartholdr <a>here</a>.</p>
+					<div class="text-center">
+						<a href="http://chartholdr.io" class="button">View Site</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+			<div class="card">
+				<div class="project-thumbnail-img text-center">
+					<img src="/images/json_resume.jpg">
+				</div>
+				<div class="card-title text-center">
+					<h3>json_resume</h3>
+				</div>
+				<div class="card-section">
+					<p>When I started my first technical internship May of 2014, I decided to build a personal website to gain experience with modern web technologies. I was searching for a way to include my resume and came across the json_resume project. I loved the idea of being able to include the resume as html, rather than linking to a pdf for download.</p>
+					<p>After the first few weeks of working with the PhoneGap platform at my internship, I was living and breathing responsive design. I quickly decided to expand json_resume to support mobile screen sizes. I made json_resume fully-responsive, minified sources, and added some personal styling of my own.</p>
+					<p>To see a before and after comparison as well as an introduction to grunticon, check out my technical blog post about json_resume <a>here</a>.
+					<div class="text-center">
+						<a href="https://github.com/prat0318/json_resume" class="button">View Source</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+<!-- 	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+			<div class="card">
+				<div class="project-thumbnail-img text-center">
+					<img src="/images/stram.svg" width=200 height=200>
+				</div>
+				<div class="card-title text-center">
+					<h3>Strametrics</h3>
+				</div>
+				<div class="card-section">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti, eveniet eius voluptatibus aliquid atque facilis culpa quos, amet, odit modi! Repellendus nulla, doloremque neque incidunt suscipit quod expedita adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<div class="text-center">
+						<a href="#" class="button">View Site</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br> -->
+	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+			<div class="text-center">
+				<p>A larger, summarized portfolio is included in <a href="/resume">my resume</a>.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="row">
+		<div class="large-8 large-offset-2 columns">
+			<div class="card">
+				<div class="card-section">
+					<h2>Contact</h2>
+					<p>If you're interested in my work or looking for a developer, contact me.</p>
+					<form action="http://formspree.io/noah@brainstormtrust.com" method="POST">
+						<div class="row">
+						    <div class="large-6 columns">
+								<label>Name
+									<input type="text" name="name" placeholder="Johnny Appleseed" />
+								</label>
+							</div>
+							<div class="large-6 columns">
+								<label>Email
+									<input type="text" name="_replyto" placeholder="you@email.com" />
+								</label>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="large-12 columns">
+								<textarea name="message" rows="8" placeholder="Your message"></textarea>
+							</div>
+						</div>
+						<br><br>
+						<div class="row">
+							<div class="large-12 columns text-right">
+								<input type="submit" value="Send" class="button secondary large"></a>
+						    </div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
