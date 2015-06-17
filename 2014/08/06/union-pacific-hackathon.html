@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+  <title>Noah's Blog - Union Pacific Hackathon</title>
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/foundation.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+  <link rel="stylesheet" href="/icons/foundation-icons.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">Noah Hines</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a href="/#portfolio">Portfolio</a></li>
+        <li class="active"><a href="/resume">Resume</a></li>
+        <li class="active"><a href="/#contact">Contact</a></li>
+        <li class="active big-link"><a href="/blog.html">Blog</a></li>
+      </ul>
+    </section>
+  </nav>
+
+
+  <!-- Blog view -->
+  <br>
+  <div class="row">
+    <div class="large-9 columns" role="content">
+      <p>This past weekend, I had the privilege of competing in Union Pacific's first Intern Hackathon. The 24-hour event, filled with teamwork, caffeine, and unhealthy coding binges was, without a doubt, the highlight of my summer.</p>
+
+<h3 id="hacking-to-safety">Hacking to Safety</h3>
+<p>After all nine teams set up their battlestations, the Hackathon problems were passed out. Our team chose "The Dangers of Highway-Rail Crossings". The problem listed statistics of the highway-rail crossing accidents that occur each year and greatly stressed the dangers these crossings present.
+</p>
+
+<p>Let me quickly introduce the team.</p>
+
+<ul>
+  <li>Cindy Chen - Electrical Engineer</li>
+  <li>Flavia Roma - Computer Science Engineer</li>
+  <li>Noah (me) - Computer Science Engineer</li>
+</ul>
+
+<p>Covering hardware, Cindy had experience <strong>programming SDR</strong> (Software Defined Radio) and was very interested in implementing signal processing into our solution.</p>
+
+<p>Covering software, Flavia had a lot of <strong>Java and scripting experience</strong>, which we knew would help collect and organize any data we were given.</p>
+
+<p>Covering mobile development, I had <strong>iOS and Android experience</strong>, which we knew would make our solution appealing for its ease of use and extendability.</p>
+
+<h3 id="our-solution">Our Solution</h3>
+<p>We called the product <strong>Track Safety</strong>: a three-part safety solution designed to decrease the number of highway-rail crossing accidents each year.</p>
+
+<p>First, an antenna is attached to the raspberry pi, which detects a train's EOT (End of Train signal) sent out every 60 seconds. This signal is used to send information between the end car and the locomotive at a set frequency. We simply listened for this frequency with a specific gain setting, waiting for the RSSI of the signal at that frequency to reach our set value.</p>
+
+<p>Second, a script is executed in response to receiving the EOT that sends an iBeacon advertisement to mobile devices.</p>
+
+<p>Third, nearby iPhones receive a push notification, warning them that a train will be crossing soon and that the area is now dangerous. If a user presses the notification to open the app, he/she will see the phone's current location and all the Union Pacific-owned highway-rail crossings in the state of Nebraska.</p>
+
+<p>Pretty straightforward, right? But given 24 hours and the goal of presenting a live demo, the project quickly became more and more stressful.</p>
+
+<h4 id="software-defined-radio">Software Defined Radio</h4>
+
+<p>We used GNURadio to implement SDR. Thankfully, Cindy had experience programming custom blocks to interpret the radio signals. Our hope was to run both the SDR receiver and iBeacon BLE advertisements from the raspberry pi, but we were only able to achieve the latter. After reading a handful of tutorials, it seemed that the only way to install GNURadio on Raspibian was to download the source and compile the code with cmake. The source files take 24+ hours to compile, so we decided to run GNURadio from our linux laptop connected to the pi as a temporary solution. We hoped that stressing that this is a Proof of Concept and there is room for extendibility will let this laptop+pi solution stand strong.</p>
+
+<h4 id="ble-advertisement">BLE Advertisement</h4>
+
+<p>We used a $10 Bluetooth 4.0 USB module powered by BlueZ to advertise iBeacon messages. There are some pretty straightforward tutorials online for getting the pi to send these advertisements. I wrote bash scripts to start and stop the advertisements so that the process would be as automated as possible. The hardest part of this process was testing that the pi was sending the advertisements. Thankfully, I found RadiusNetworks' Locate app, which allowed me to specify custom UUID, major, and minor values. For a free solution, RadiusNetworks' app is a godsend.</p>
+
+<h4 id="ios-application">iOS Application</h4>
+
+<p>Union Pacific's IT dept. absolutely loves PhoneGap for its ease of use and simple cross-platform solution. We did not use PhoneGap, however, because our main goal was sending a push notification to the user's phone while the application is in the background. There are multiple PhoneGap plugins on GitHub that support iBeacon moitoring and ranging, but from what I can tell, there is not an easy method for implementing background iBeacon monitoring using PhoneGap.</p>
+
+<p>So insead, I used Xcode to program the native application. Starting with RadiusNetworks' background example, I built the app layer by layer.
++ Layer 1 - iBeacon Scanning
++ Layer 2 - Push Notification
++ Layer 3 - Google Map API</p>
+
+<p>pics</p>
+
+<h3 id="tips-for-the-future">Tips for the Future</h3>
+<p>The main thing I learned from this event was: <strong>Your presentation will make or break you</strong>. I saw great products flop and I saw not-so-great products look pretty awesome. The key is to tell a memorable story with your product. When you go on stage to present, it will be the very first time the judges see your project. By this time, you are so focused on your solution, that you can easily forget the big picture and may find yourself stressing low-level functions of your product that won't mean much to the judging panel. This doesn't mean keep the back-end a secret – but be sure to stress <strong>why the back-end is necessary to solve the problem</strong>.</p>
+
+<p>This brings me to my second tip: <strong>Don't waste time on things the audience won't see</strong>. I found myself wasting a lot of time optimising the push notification service on the iOS app. Those 2-3 hours I spent messing with that code added nothing to our final presentation because it was 100% back-end. Our product is a Proof of Concept – it doesn't matter if there are memory leaks!</p>
+
+<h3 id="overview">Overview</h3>
+<p>By the end of the 24 hours, my major complaint was "Why do I have work tomorrow?" It seems really unfair that you lose your whole weekend to a programming event, but I quickly stopped complaining once my head hit the pillow. I highly recommend participating in a Hackathon. I think the best part of an event like this is realising that you were able to team up and create a functioning product in just one day.</p>
+
+
+    </div>
+    <div class="large-3 columns hide-for-small">
+      <aside>
+        <div class="row">
+          <div class="small-12 columns">
+            <img class="profile-pic" src="/images/noah.jpg">
+            <div class="button-icons text-center">
+              <a href="http://github.com/NoahHines"><i class="fi-social-github"></i></a>
+              <a href="http://twitter.com/NoahTrust"><i class="fi-social-twitter"></i></a>
+              <a href="https://www.linkedin.com/pub/noah-hines/54/934/725"><i class="fi-social-linkedin"></i></a>
+            </div>
+            <p class="text-center">My name is Noah Hines and I love problem solving. I work with a team of developers called BrainStorm Trust building responsive web apps. I also enjoy playing guitar and exercising.</p>
+          </div>
+        </div>
+
+      </aside>
+      <aside>
+        <h3>Blog Posts</h3>
+        <ol>
+          <li><a href="/2015/06/06/chartholdr.html">Chartholdr.io is live</a> <span>Jun  6</span></li>
+          <li><a href="/2014/08/06/union-pacific-hackathon.html">Union Pacific Hackathon</a> <span>Aug  6</span></li>
+        </ol>
+
+        <h3>Tags</h3>
+        <ol>
+          <li><a href="/tags/hackathon-union-pacific.html">hackathon union pacific (1)</a></li>
+          <li><a href="/tags/image-placeholder.html">image placeholder (1)</a></li>
+          <li><a href="/tags/foundation.html">foundation (1)</a></li>
+          <li><a href="/tags/ruby-on-rails.html">ruby on rails (1)</a></li>
+          <li><a href="/tags/brainstorm-trust.html">brainstorm trust (1)</a></li>
+        </ol>
+
+        <h3>By Year</h3>
+        <ol>
+          <li><a href="/2015.html">2015 (1)</a></li>
+          <li><a href="/2014.html">2014 (1)</a></li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="row full-width">
+      <div class="small-12 medium-3 large-4 columns">
+        <img src="http://chartholdr.io/pie/95">
+        <br><br>
+        <p>I am the creator of <a href="http://Chartholdr.io">Chartholdr.io</a>, a fast and simple image placeholder for charts and graphs. The project is open source and continually supported by me and my friends.</p>
+      </div>
+      <div class="small-12 medium-3 large-4 columns">
+        <img src="/images/BST_logo.svg" height=95 width=107>
+        <br><br>
+        <p>BrainStorm Trust is a web development company based in Lansing where I work as a full stack developer. Read more at our site <a href="http://brainstormtrust.com">BrainStormTrust.com</a>.</p>
+      </div>
+      <div class="small-6 medium-3 large-2 columns">
+        <h4>Site Map</h4>
+        <ul class="footer-links">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="small-6 medium-3 large-2 columns">
+        <h4>Follow Me</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NoahHines">GitHub</a></li>
+          <li><a href="https://twitter.com/NoahTrust">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/pub/noah-hines/54/934/725">Linked In</a></li>
+          <li><a href="http://brainstormtrust.com">BST Web</a></li>
+        </ul>
+      </div>
+    </div>
+    <small>&copy;<script>document.write(new Date().getFullYear())</script> NoahHines.com</small>
+  </footer>
+  <script src="/javascripts/vendor/jquery.js"></script>
+  <script src="/javascripts/foundation/foundation.js"></script>
+  <script src="/javascripts/foundation/foundation.topbar.js"></script>
+  <script src="/javascripts/foundation/foundation.dropdown.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/vendor/typed.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
