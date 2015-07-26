@@ -7,10 +7,10 @@ title: INDEX
 
 <!-- Blog banner -->
 <div class="blog-banner show-for-large-up">
-	<span class="blog-arrow"><img src="/images/arrow.svg" height=40 width=70></span>
+	<span class="blog-arrow"><img src="/images/arrow.svg" height=40 width=50></span>
 	<div class="text-right">
 		<h5>Check out my latest blog post!</h5>
-		<h3><%= link_to page_articles[0].title, page_articles[0] %></h3>
+		<h4><a href="blog.html"><%= page_articles[0].title %></a></h4>
 	</div>
 </div>
 
@@ -51,20 +51,20 @@ title: INDEX
 			<br>
 			<h4>I work with a team of developers called <a href="http://brainstormtrust.com">BrainStorm Trust</a> building responsive web apps.</h4>
 			<br>
-			<a href="#portfolio" class="button large">View Portfolio</a>
+			<a href="#projects" class="button large">View Projects</a>
 		</div>
 	</div>
 </section>
 
-<section id="portfolio">
+<section id="projects">
 	<div class="row">
 		<div class="small-12 columns text-center">
-			<h2>Portfolio</h2>
+			<h2>Projects</h2>
 		</div>
 	</div>
 	<br>
 	<div class="row">
-		<div class="large-10 large-offset-1 columns">
+		<div class="card-holder">
 			<div class="card">
 				<div class="project-thumbnail-img text-center">
 					<img src="http://chartholdr.io/pie/200">
@@ -74,25 +74,12 @@ title: INDEX
 				</div>
 				<div class="card-section">
 					<p>Chartholdr is a quick and easy placeholder image service that delivers lorem ipsum charts and graphs. Similar to placehold.it, Chartholdr allows you to use short URLs to place charts into your website.</p>
-					<code>&lt;img style="float:right;" src="http://chartholdr.io/pie/200"&gt;</code>
-					<br><br>
-					<img style="float:right;" src="http://chartholdr.io/bar/160">
-					<p>I first had the idea for Chartholdr when presenting an early web design to a client. The days leading up to the presentation were spent building the layout, which consisted of blank placehold.it images as well as adorable placekitten images. I stared at the site so long that the adorable kitten became background noise and I accidentally left them in. I never considered the possibility that placeholder images could ruin the client's perspective of his of his future site. After the meeting, I desperately wished there was an image placeholder solution that delivered professional content.</p>
-					<p>So, I created Chartholdr.</p>
-					<div class="text-center">
-						<img src="http://chartholdr.io/pie/30/c=d50000"><img src="http://chartholdr.io/pie/30/c=ff6d00"><img src="http://chartholdr.io/pie/30/c=ffd600"><img src="http://chartholdr.io/pie/30/c=00c853"><img src="http://chartholdr.io/pie/30/c=304ffe"><img src="http://chartholdr.io/pie/30/c=0091ea"><img src="http://chartholdr.io/pie/30/c=aa00ff">
-					</div>
-					<p>Chartholdr is built with Ruby on Rails and is hosted on Elastic Beanstalk. The project is open source and is continually supported by me and the rest of the BrainStorm Trust. If you're curious about the nitty gritty details, check out my technical blog post about Chartholdr <a>here</a>.</p>
+					<p>If you're curious about the technical details, check out my blog post about Chartholdr <a href="2015/07/12/chartholdr.html">here</a>.</p>
 					<div class="text-center">
 						<a href="http://chartholdr.io" class="button">View Site</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<br><br><br>
-	<div class="row">
-		<div class="large-10 large-offset-1 columns">
 			<div class="card">
 				<div class="project-thumbnail-img text-center">
 					<img src="/images/json_resume.jpg">
@@ -101,9 +88,7 @@ title: INDEX
 					<h3>json_resume</h3>
 				</div>
 				<div class="card-section">
-					<p>When I started my first technical internship May of 2014, I decided to build a personal website to gain experience with modern web technologies. I was searching for a way to include my resume and came across the json_resume project. I loved the idea of being able to include the resume as html, rather than linking to a pdf for download.</p>
-					<p>After the first few weeks of working with the PhoneGap platform at my internship, I was living and breathing responsive design. I quickly decided to expand json_resume to support mobile screen sizes. I made json_resume fully-responsive, minified sources, and added some personal styling of my own.</p>
-					<p>To see a before and after comparison as well as an introduction to grunticon, check out my technical blog post about json_resume <a>here</a>.
+					<p>After the first few weeks of working with the PhoneGap platform at my internship, I was living and breathing responsive design. Using this knowledge, I decided to expand json_resume to be fully-responsive, supporting mobile screen sizes. I made json_resume fully-responsive, minimized loading time, and added some personal styling of my own.</p>
 					<div class="text-center">
 						<a href="https://github.com/prat0318/json_resume" class="button">View Source</a>
 					</div>
@@ -111,30 +96,12 @@ title: INDEX
 			</div>
 		</div>
 	</div>
-	<br><br><br>
-<!-- 	<div class="row">
-		<div class="large-10 large-offset-1 columns">
-			<div class="card">
-				<div class="project-thumbnail-img text-center">
-					<img src="/images/stram.svg" width=200 height=200>
-				</div>
-				<div class="card-title text-center">
-					<h3>Strametrics</h3>
-				</div>
-				<div class="card-section">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti, eveniet eius voluptatibus aliquid atque facilis culpa quos, amet, odit modi! Repellendus nulla, doloremque neque incidunt suscipit quod expedita adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					<div class="text-center">
-						<a href="#" class="button">View Site</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br><br><br><br> -->
+	<br><br><br><br>
+
 	<div class="row">
 		<div class="large-10 large-offset-1 columns">
 			<div class="text-center">
-				<p>A larger, summarized portfolio is included in <a href="/resume">my resume</a>.</p>
+				<p>A full portfolio is included in <a href="/resume">my resume</a>.</p>
 			</div>
 		</div>
 	</div>
@@ -146,7 +113,7 @@ title: INDEX
 			<div class="card">
 				<div class="card-section">
 					<h2>Contact</h2>
-					<p>If you're interested in my work or looking for a developer, contact me.</p>
+					<p>I'm currently looking for a software internship for Summer 2016. If you think you have work for me, please reach out.</p>
 					<form action="http://formspree.io/noah@brainstormtrust.com" method="POST">
 						<div class="row">
 						    <div class="large-6 columns">

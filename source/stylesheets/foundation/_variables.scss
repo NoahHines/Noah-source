@@ -1291,7 +1291,7 @@ $default-float: left;
  $topbar-link-weight: 300;
  $topbar-link-font-size: em-calc(20);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
- $topbar-link-bg-hover: lighten($topbar-bg-color, 5%);
+ $topbar-link-bg-hover: lighten($topbar-bg-color, 10%);
  $topbar-link-bg-active: $topbar-bg-color;
 
  //$topbar-dropdown-label-color: $randy-newman;

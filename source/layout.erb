@@ -26,7 +26,6 @@
 </head>
 <body>
 
-
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
@@ -54,8 +53,11 @@
   <!-- Blog view -->
   <% if !current_page.data.isHomePage %>
   <br>
-  <div class="row">
+  <div class="row blog-content">
     <div class="large-9 columns" role="content">
+      <% if current_page.data.title %>
+        <h2><%= current_page.data.title %> <small><%= current_page.data.date.strftime('%b %e, %Y') %></small></h2>
+      <% end %>
       <%= yield %>
     </div>
     <div class="large-3 columns hide-for-small">
@@ -68,7 +70,7 @@
               <a href="http://twitter.com/NoahTrust"><i class="fi-social-twitter"></i></a>
               <a href="https://www.linkedin.com/pub/noah-hines/54/934/725"><i class="fi-social-linkedin"></i></a>
             </div>
-            <p class="text-center">My name is Noah Hines and I love problem solving. I work with a team of developers called BrainStorm Trust building responsive web apps. I also enjoy playing guitar and exercising.</p>
+            <p class="text-center">My name is Noah Hines and I love solving problems. I work with a team of developers called BrainStorm Trust building responsive web apps. I also enjoy playing guitar and exercising.</p>
           </div>
         </div>
 

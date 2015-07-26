@@ -29,6 +29,16 @@ p a {
   }
 }
 
+// Nav
+ul li.big-link a {
+  background-color: lighten($frat-red, 5) !important;
+  &:hover {
+    background-color: lighten($frat-red, 10) !important;
+  }
+}
+
+
+
 //Blog banner
 .blog-banner {
   display: none;
@@ -38,7 +48,7 @@ p a {
 }
 .blog-arrow {
   float: right;
-  padding: 0 0.4em;
+  padding: 0.75em 0.4em;
 }
 
 // Sections
@@ -47,14 +57,14 @@ p a {
   padding: 1em 0;
   background-color: $faded-jeans;
 }
-#portfolio, #contact {
+#projects, #contact {
   padding-top: 4em;
 }
 #contact {
-  padding-bottom: 8em;
+  padding-bottom: 6em;
 }
 
-// Portfolio
+// Projects
 .card {
   border: 1px solid #ededed;
   margin-bottom: 0.5rem;
@@ -63,6 +73,7 @@ p a {
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  margin: 0 0.5em 0 0.5em;
 }
 .card .card-title {
   padding: 1rem;
@@ -107,6 +118,13 @@ form .row div .large {
 .text-center img {
   float: none;
   margin: 0;
+}
+
+.large-9 p img {
+  float: right;
+}
+.blog-content {
+  padding-bottom: 4em;
 }
 
 .profile-pic {
@@ -242,6 +260,27 @@ form .row div .large {
 //////// Terminal Animation
 
 
+
+
+
+/* Flexbox */
+.card-holder {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-holder > .card {
+  width: 100%;
+}
+.card-holder > .card:first-child {
+  // margin-left: 0;
+}
+
+
+
+
 // Desktop styles
 @media only screen and (min-width: 40.063em) {
   //Blog banner
@@ -250,7 +289,7 @@ form .row div .large {
     position: absolute;
     /* float: right; */
     right: 0;
-    width: 340px;
+    width: 375px;
     padding: 0.4rem;
   }
   #terminal {
@@ -263,6 +302,11 @@ form .row div .large {
      min-height: 280px;
    }
  }
+
+  .card-holder > .card {
+    width: 47%;
+    margin: 0 0 0 1em;
+  }
 
  // Blog
  .button-icons {
