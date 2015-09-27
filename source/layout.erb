@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-  <title>Noah's Blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
+  <title>Noah Hines <%= ' - ' + current_article.title unless current_article.nil? %></title>
   <meta name="description" content="I am an entrepreneurial Computer Science student attending Michigan State University.">
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 
@@ -133,7 +133,7 @@
         </ul>
       </div>
     </div>
-    <small>&copy;<script>document.write(new Date().getFullYear())</script> NoahHines.com :)</small>
+    <small>&copy;<script>document.write(new Date().getFullYear())</script> NoahHines.com</small>
   </footer>
   <script src="/javascripts/vendor/jquery.js"></script>
   <script src="/javascripts/foundation/foundation.js"></script>
