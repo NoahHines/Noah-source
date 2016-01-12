@@ -18,7 +18,7 @@ html {
 
 h1, h2, h3, h4 {
   font-family: "Times New Roman";
-  font-size: 20px;
+  font-size: 24px;
   display: inline;
   font-weight: 300;
 }
@@ -79,7 +79,7 @@ a:hover {
   display: inline-block;
   padding: 0 1em;
   vertical-align: top;
-  padding-top: 2em;
+  padding-top: 2.5em;
   line-height: 2;
 }
 #profilesBlock {
@@ -88,17 +88,18 @@ a:hover {
 
 .top img {
   display: inline-block;
-  width: 100px;
+  width: 130px;
 }
 
 .largeFont {
   font-size: 20px;
 }
-
+  
 .sectionName {
   vertical-align: top;
   display: inline-block;
-  font-size: 15px;
+  font-size: 17px;
+  padding-bottom: 2px;
   font-style: bold;
 }
 
@@ -115,10 +116,11 @@ a:hover {
 
 .title {
   font-weight: bold;
+  font-size: larger;
 }
 
 .sectionContent .date {
-  float: right;
+  /*float: right;*/
 }
 
 .sectionContent .separator {
@@ -211,10 +213,20 @@ a:hover {
 }
 
 @media print {
+  .sectionName {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 15px;
+    padding-bottom: 0px;
+    font-style: bold;
+  }
   #resume-banner {
     display: none;
     margin: 0;
     padding: 0;
+  }
+  #resume-container {
+    margin: 0;
   }
   body {
     font: 12px "Times New Roman", Times, sans-serif;
@@ -232,6 +244,7 @@ a:hover {
     -webkit-box-shadow: none;
   }
 }
+
 	</style>
 	
 	</head>
@@ -254,8 +267,7 @@ a:hover {
             <h2 class='label'>Student &amp; Developer</h2>
           </div>
           <div class='contactBlock'>
-            <span class='email'><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="7c141512190f12131d3c110f0952191809">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">
-/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></span>
+            <span class='email'>hinesnoa@msu.edu</span>
             <span class='divider'>|</span>
             <span class='phone'>(616) 916-8722</span>
               <span class='divider'>|</span>
@@ -296,8 +308,8 @@ a:hover {
             <span class='title'>
               General Mills, App Developer Intern
             </span>
-            <span class='date'>
-              May-Aug 2015
+            <span class='date'> - 
+              May 2015-Aug 2015
             </span>
           </div>
           <div><a href=''></a></div>
@@ -309,7 +321,7 @@ a:hover {
             <span class='title'>
               Michigan State University REHS, Resident Assistant
             </span>
-            <span class='date'>
+            <span class='date'> - 
               Aug 2014-Present
             </span>
           </div>
@@ -322,8 +334,8 @@ a:hover {
             <span class='title'>
               Web Startup, &#x27;The Hatch&#x27;
             </span>
-            <span class='date'>
-              Aug 2012-Present
+            <span class='date'> - 
+              Sep 2013-May 2015
             </span>
           </div>
           <div><a href=''></a></div>
@@ -335,8 +347,8 @@ a:hover {
             <span class='title'>
               Union Pacific, IT Intern
             </span>
-            <span class='date'>
-              May-Aug 2014
+            <span class='date'> - 
+              May 2014-Aug 2014
             </span>
           </div>
           <div><a href=''></a></div>
@@ -348,7 +360,7 @@ a:hover {
             <span class='title'>
               Aerotek, Lab Systems Technician
             </span>
-            <span class='date'>
+            <span class='date'> - 
               May-Aug 2014 - May-Aug 2013
             </span>
           </div>
@@ -388,7 +400,8 @@ a:hover {
             <span class='title'>Design:</span>
               <span>Illustrator</span>, 
               <span>Photoshop</span>, 
-              <span>After Effects</span>
+              <span>After Effects</span>, 
+              <span>Autodesk</span>
           </div>
         </div>
       </div>
@@ -423,7 +436,7 @@ a:hover {
             </span>
           </div>
           <div class='highlights'>
-            <p>Won 1st place at regional and state levels and placed in top 10 at world competition. Have continued to participate as a judge for 4 years.</p>
+            <p>Won 1st place at regional and state levels and placed in top 10 at world competition. Have continued to volunteer as a judge for 4 years.</p>
           </div>
           
         </div>
@@ -450,15 +463,17 @@ a:hover {
               <div class="course">
                 <p>CSE 260: Discrete Structures in Computer Science</p>
                 <p>CSE 331: Algorithms and Data Structures</p>
-                <p>CSE 491: Biometrics</p>
+                <p>CSE 491: Introduction to Biometrics</p>
               </div>
               <div class="course">
                 <p>CSE 320: Computer Organization and Architecture</p>
                 <p>CSE 410: Operating Systems</p>
+                <p>CSE 491: Computational Techniques for Large-Scale Data Analysis</p>
               </div>
               <div class="course">
                 <p>CSE 335: Object-Oriented Software Development</p>
                 <p>CSE 477: Web Architechure</p>
+                <p>CSE 491: Algorithm Engineering</p>
               </div>
             </div>
           </div>
@@ -481,6 +496,8 @@ a:hover {
           <span class='name'>User Experience</span>
           <span> - </span>
           <span class='name'>Tech Startups</span>
+          <span> - </span>
+          <span class='name'>Computer Graphics</span>
           <span> - </span>
           <span class='name'>Music</span>
           <span> - </span>
