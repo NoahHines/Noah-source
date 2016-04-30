@@ -37,6 +37,9 @@ ul li.big-link a {
   }
 }
 
+article p img {
+  margin: 0.25em; 
+}
 
 
 //Blog banner
@@ -290,7 +293,9 @@ form .row div .large {
   }
 }
 
-
+.terminal-window {
+  max-width: 500px;
+}
 
 // Desktop styles
 @media only screen and (min-width: 40.063em) {
@@ -300,7 +305,7 @@ form .row div .large {
     position: absolute;
     /* float: right; */
     right: 0;
-    width: 375px;
+    width: 385px;
     padding: 0.4rem;
   }
   #terminal {

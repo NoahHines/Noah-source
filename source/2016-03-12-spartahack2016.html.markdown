@@ -1,0 +1,30 @@
+---
+title: SpartaHack 2016
+date: 2016-03-12
+tags: msu, hackathon, michigan state university, spartahack, spartahack 2016
+category: hackathon
+---
+
+![SpartaHack 2016 logo](/images/spartahack-logo.png)
+
+Starting in September, I worked alongside 19 passionate MSU students to put on Michigan State University's second annual hackathon: SpartaHack. Working as a developer and designer, I attended weekly meetings with our organizing team, where we took turns presenting updates and discussing problems to solve as a group.
+
+Although I considered myself an experienced hackathon attendee, I immediately felt lost as an organizer. Behind every hackathon, there are hard working volunteers who spends months working on an event that ends in just 36 hours. Without these volunteers, a hackathon wouldn't be the fun, safe, and educational experience every participant expects it to be. I don't think the participants realize this -- but maybe that's a sign of a great hackathon.
+
+READMORE
+
+## My Work
+
+When I joined the team in September, the front-facing site was already complete. [Austin Truchan](http://www.austintruchan.net), a design grad student and SpartaHack 2015 designer, had already created the logo and homepage of the SpartaHack site. The last of the work was to be done on the admin pages: specifically, pages for managing submitted applications and viewing user statistics.
+
+[Bogdan Pozderca](http://www.bogdanpozderca.com) and I were the only web developers on the 2016 team. Together, we divided up the work, assigning issues on the github repo. Most of my work was on the Statistics page, where the SpartaHack organizers could view information about the applicants in a user-friendly manner.
+
+The Statistics are broken up into three different views: Application, RSVP, and Attending.
+
+The best part of the Statistics page was that it was constantly being updated through a process that closely mirrored agile development. Within two weeks, I had a working start that only showed the counts for the applications and the percentages for gender. This prototype continued to grow as new ideas were shared at each weekly meeting. Once we started accepting applicants, a new page was needed to specifically view the accepted applications. And eventually, I knew we'd need a page for the attending applicants, showing only the applicants who checked in the dat of the hackathon.
+
+Rather than create three separate pages, I decided to filter the content with radio buttons. This is nice because it decreases the number of Parse requests and allows us to compare the data back and forth quickly. The backend of the Statistics page is done in its own rails controller, which passes javascript arrays to the front end, where d3 is used to make the content pretty.
+
+Since the statistics page requires admin credentials, I’ve saved the page on my own site for anyone interested in viewing. [http://NoahHines.com/spartahack/spartastats](http://noahhines.com/spartahack/SpartaStats.html).
+
+If you're interested in the project, you can see the code on our public github repo here: [SpartaHack2016](https://github.com/SpartaHack/SpartaHack2016-Website)

@@ -3,6 +3,7 @@
 ###
 
 # Time.zone = "UTC"
+Time.zone = "US/Eastern"
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths

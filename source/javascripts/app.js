@@ -17,7 +17,7 @@ $(function() {
   { 
     action: 'type',
     strings: ["npm install -g Noah^400"],
-    output: '<span class="gray">+Noah@21.0 installed</span><br>&nbsp;',
+    output: '<span class="gray">+Noah@22.0 installed</span><br>&nbsp;',
     postDelay: 1000
   },
   { 
