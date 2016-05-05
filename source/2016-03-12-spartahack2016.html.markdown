@@ -1,11 +1,11 @@
 ---
 title: SpartaHack 2016
 date: 2016-03-12
-tags: msu, hackathon, michigan state university, spartahack, spartahack 2016
+tags: msu, hackathon, spartahack
 category: hackathon
 ---
 
-![SpartaHack 2016 logo](/images/spartahack-logo.png)
+![SpartaHack 2016 logo](/images/spartahack-logo-small.png)
 
 Starting in September, I worked alongside 19 passionate MSU students to put on Michigan State University's second annual hackathon: SpartaHack. Working as a developer and designer, I attended weekly meetings with our organizing team, where we took turns presenting updates and discussing problems to solve as a group.
 

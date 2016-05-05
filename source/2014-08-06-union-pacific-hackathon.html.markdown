@@ -1,7 +1,7 @@
 ---
 title: Union Pacific Hackathon
 date: 2014-08-06
-tags: hackathon union pacific
+tags: hackathon, union pacific
 category: hackathon
 ---
 

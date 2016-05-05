@@ -55,80 +55,118 @@ title: INDEX
 <section id="projects">
 	<div class="row">
 		<div class="small-12 columns text-center">
-			<h2>Projects</h2>
+			<h2>Code</h2>
 		</div>
 	</div>
 	<br>
 	<div class="row">
-		<div class="card-holder">
-			<div class="card">
-				<div class="project-thumbnail-img text-center">
-					<img src="/images/tempo.jpg">
-				</div>
-				<div class="card-title text-center">
-					<h3>Tempo</h3>
-				</div>
-				<div class="card-section">
-					<p>Tempo is an iOS/Apple Watch app that builds playlists to match your heart rate</p>
-					<p>This app was built by me and my two teammates at MHacks. Read more about MHacks <a href="http://mhacks.org/">here</a>.</p>
-					<div class="text-center">
-						<a href="http://devpost.com/software/tempo-g6hjks" class="button">View App</a>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="project-thumbnail-img text-center">
-					<img src="http://chartholdr.io/pie/200">
-				</div>
-				<div class="card-title text-center">
-					<h3>Chartholdr.io</h3>
-				</div>
-				<div class="card-section">
-					<p>Chartholdr is a quick and easy placeholder image service that delivers lorem ipsum charts and graphs. Similar to placehold.it, Chartholdr allows you to use short URLs to place charts into your website.</p>
-					<p>If you're curious about the technical details, check out my blog post about Chartholdr <a href="2015/07/12/chartholdr.html">here</a>.</p>
-					<div class="text-center">
-						<a href="http://chartholdr.io" class="button">View Site</a>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="project-thumbnail-img text-center">
-					<img src="/images/hue_monitor.jpg">
-				</div>
-				<div class="card-title text-center">
-					<h3>Hue Monitor</h3>
-				</div>
-				<div class="card-section">
-					<p>Hue Monitor is an OS X application that analyzes the color environment of what is displayed on the desktop and reflects the colors onto a number of networked Phillips lights. Whether you're watching a movie, viewing photos, playing video games, or just getting work done, your environment will reflect what you're doing.</p>
-					<p>This was built for MHacks 5. You can read more about it <a href="http://devpost.com/software/huemonitor">here</a>.</p>
-					<div class="text-center">
-						<a href="https://github.com/NoahHines/HueMonitor" class="button">View Source</a>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="project-thumbnail-img text-center">
-					<img src="/images/json_resume.jpg">
-				</div>
-				<div class="card-title text-center">
-					<h3>json_resume</h3>
-				</div>
-				<div class="card-section">
-					<p>After the first few weeks of working with the PhoneGap platform at my internship, I was living and breathing responsive design. Using this knowledge, I decided to expand json_resume to be fully-responsive, supporting mobile screen sizes. I made json_resume fully-responsive, minimized loading time, and added some personal styling of my own.</p>
-					<div class="text-center">
-						<a href="https://github.com/prat0318/json_resume" class="button">View Source</a>
-					</div>
-				</div>
-			</div>
 
+		<ul class="cards">
+
+  		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/spartahack-logo.png)"></div>
+		      <div class="card__content">
+		        <div class="card__title">SpartaHack 2016</div>
+		        <p>I work as a developer and designer on SpartaHack: the official Michigan State University annual hackathon.<br><br>
+		        Read about <a href="/2016/03/12/spartahack2016.html">my experience</a>.</p>
+		        <a href="http://spartahack.com" class="button btn--block card__btn">View Site</a>
+		      </div>
+		    </div>
+		  </li>
+
+		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(http://chartholdr.io/pie/600/400)"></div>
+		      <div class="card__content">
+		        <div class="card__title">Chartholdr</div>
+		        <p>Chartholdr is a quick and easy placeholder image service that delivers lorem ipsum charts and graphs.<br><br>
+		        Read about it <a href="/2015/07/12/chartholdr.html">here</a>.</p>
+		        <a href="http://chartholdr.io" class="button btn--block card__btn">View Site</a>
+		      </div>
+		    </div>
+		  </li>
+
+  		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/tempo.jpg)"></div>
+		      <div class="card__content">
+		        <div class="card__title">Tempo</div>
+		        <p>Tempo is an iOS/Apple Watch app that builds playlists to match your heart rate.<br>This app was built by me and my two teammates at <a href="http://mhacks.org">MHacks</a>.</p>
+		        <a href="http://devpost.com/software/tempo-g6hjks" class="button btn--block card__btn">View App</a>
+		      </div>
+		    </div>
+		  </li>
+
+		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/hue_monitor.jpg)"></div>
+		      <div class="card__content">
+		        <div class="card__title">Hue Monitor</div>
+		        <p>Hue Monitor is an <a href="http://mhacks.org/">MHacks</a> submission that matches the average colors on your computer screen with an array of networked Phillips Hue light bulbs.</p>
+		        <a href="https://github.com/NoahHines/HueMonitor" class="button btn--block card__btn">View App</a>
+		      </div>
+		    </div>
+		  </li>
+
+		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/json_resume.png)"></div>
+		      <div class="card__content">
+		        <div class="card__title">json_resume</div>
+		        <p>I contributed to json_resume, an html resume generator.</p>
+		        <a href="https://github.com/prat0318/json_resume" class="button btn--block card__btn">View Source</a>
+		      </div>
+		    </div>
+		  </li>
+
+		</ul>
+
+	</div>
+
+	<br><br><br>
+
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<h2>Intermedia</h2>
 		</div>
 	</div>
-	<br><br><br><br>
+	<div class="row">
+
+		<ul class="cards">
+
+  		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/art/apollo-controls.jpg)"></div>
+		      <div class="card__content">
+		        <div class="card__title">Apollo 11 Sights and Sounds</div>
+		        <p>An audio/visual artist book centered around the Apollo 11 mission.</p>
+		        <a href="https://github.com/prat0318/json_resume" class="button btn--block card__btn">View Book</a>
+		      </div>
+		    </div>
+		  </li>
+
+		  <li class="cards__item">
+		    <div class="card">
+		      <div class="card__image card__image" style="background-image: url(/images/art/pioneer-plaque.png)"></div>
+		      <div class="card__content">
+		        <div class="card__title">The Updated Pioneer Plaque</div>
+		        <p>A series of pieces exploring a modern version of the Pioneer Plaque.</p>
+		        <a href="https://github.com/prat0318/json_resume" class="button btn--block card__btn">View Art</a>
+		      </div>
+		    </div>
+		  </li>
+		  
+		</ul>
+
+	</div>
+
+	<br><br><br>
 
 	<div class="row">
 		<div class="large-10 large-offset-1 columns">
 			<div class="text-center">
-				<p>More information can be found in <a href="/resume">my resume</a>.</p>
+				<p>Looking for my <a href="/resume">my resume</a>?</p>
 			</div>
 		</div>
 	</div>
@@ -141,7 +179,7 @@ title: INDEX
 				<div class="card-section">
 					<h2>Contact</h2>
 					<br>
-						<form action="http://formspree.io/noah@brainstormtrust.com" method="POST">
+						<form action="http://formspree.io/hinesnoa@msu.edu" method="POST">
 						<div class="row">
 						    <div class="large-6 columns">
 								<label>Name
@@ -157,13 +195,13 @@ title: INDEX
 						<br>
 						<div class="row">
 							<div class="large-12 columns">
-								<textarea name="message" rows="8" placeholder="Your message"></textarea>
+								<textarea name="message" rows="8" placeholder="Your message" style="height: 120px;"></textarea>
 							</div>
 						</div>
 						<br><br>
 						<div class="row">
 							<div class="large-12 columns text-right">
-								<input type="submit" value="Send" class="button secondary large"></a>
+								<input type="submit" value="Send" class="button primary large"></a>
 						    </div>
 						</div>
 					</form>

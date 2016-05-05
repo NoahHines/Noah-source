@@ -1,8 +1,8 @@
 ---
 title: How Chartholdr Works
 date: 2015-07-12
-tags: image placeholder, foundation, ruby on rails, brainstorm trust
-category: hackathon
+tags: rails, web dev
+category: web dev
 ---
 
 
